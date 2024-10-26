@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body onload="displayData()" class="bg-slate-300/60">
+    <!-- Section Profil Start -->
+    <section id="profil-section" class="bg-white mx-4 my-7 lg:flex">
+      <div class="flex items-center lg:w-1/2">
+        <img src="img/image.png" alt="" class="rounded-full" />
+        <div class="mx-5 lg:mx-12">
+          <div id="data-user1">
+            <h1 id="name" class="font-bold text-3xl">Nama Anda</h1>
+            <p id="role">Role</p>
+          </div>
+
+          <button
+            id="edit"
+            class="w-20 h-10 mt-5 mr-3 bg-blue-600 rounded-lg font-semibold text-white shadow-md shadow-slate-700/60"
+          >
+            Edit
+          </button>
+          <button
+            id="delete"
+            type="button"
+            onclick="deleteData()"
+            class="w-20 h-10 mt-5 mr-3 bg-blue-600 rounded-lg font-semibold text-white shadow-md shadow-slate-700/60"
+          >
+            Delete
+          </button>
+          <button
+            class="px-10 py-2 mt-2 mr-3 border border-green-600 text-green-600 font-semibold rounded-md"
+          >
+            Resume
+          </button>
+        </div>
+      </div>
+      <div class="py-4 px-4 flex items-center lg:w-1/2">
+        <div>
+          <p>Availability</p>
+          <p>Usia</p>
+          <p>Lokasi</p>
+          <p>Pengalaman</p>
+          <p>Email</p>
+        </div>
+        <div id="data-user2" class="ml-10"></div>
+      </div>
+    </section>
+    <!-- Section Profil End -->
+    <!-- Section Form Start -->
+    <section id="input-section" class="hidden bg-white mx-4 my-7">
+      <form action="" class="mx-6 py-5">
+        <label for="name-input" class="font-semibold">Nama</label>
+        <br />
+        <input
+          id="name-input"
+          type="text"
+          placeholder="Nama Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800"
+        />
+        <label for="role-input" class="font-semibold">role</label>
+        <br />
+        <input
+          id="role-input"
+          type="text"
+          placeholder="Role Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800"
+        />
+        <label for="availability-input" class="font-semibold"
+          >availability</label
+        >
+        <br />
+        <input
+          id="availability-input"
+          type="text"
+          placeholder="Availability Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800"
+        />
+        <label for="usia-input" class="font-semibold">Usia</label>
+        <br />
+        <input
+          id="usia-input"
+          type="text"
+          placeholder="Usia Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800"
+        />
+        <label for="lokasi-input" class="font-semibold">Lokasi</label>
+        <br />
+        <input
+          id="lokasi-input"
+          type="text"
+          placeholder="Lokasi Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800"
+        />
+        <label for="yoe-input" class="font-semibold">Years Experience</label>
+        <br />
+        <input
+          id="yoe-input"
+          type="text"
+          placeholder="Pengalaman Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800"
+        />
+        <label for="email-input" class="font-semibold">Email</label>
+        <br />
+        <input
+          id="email-input"
+          type="email"
+          placeholder="Email Anda"
+          class="px-4 py-1 mb-4 border w-full border-slate-800 peer"
+        />
+        <p
+          class="-mt-3 mb-6 text-lg lg:text-sm invisible peer-invalid:visible text-red-600"
+        >
+          Email tidak valid!!
+        </p>
+
+        <button
+          id="submit"
+          type="submit"
+          onclick="inputData()"
+          class="bg-green-700 w-full text-white py-1 font-semibold ring-2 ring-lime-500/80 rounded-[2px]"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </section>
+    <!-- Section Form End -->
+
+    <script src="Js/script.js"></script>
+  </body>
+</html>
